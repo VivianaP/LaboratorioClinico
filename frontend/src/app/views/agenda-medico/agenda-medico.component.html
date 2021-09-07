@@ -1,0 +1,84 @@
+
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+            <h1>Agenda</h1>
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="btn-group">
+                                    <div class="btn btn-primary" mwlCalendarPreviousView [view]="view"
+                                        [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                                        Anterior
+                                    </div>
+                                    <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
+                                        Hoy
+                                    </div>
+                                    <div class="btn btn-primary" mwlCalendarNextView [view]="view"
+                                        [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                                        Próximo
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Septiembre</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="btn-group">
+                                    <div class="btn btn-primary" (click)="setView(CalendarView.Month)"
+                                        [class.active]="view === CalendarView.Month">
+                                        Mes
+                                    </div>
+                                    <div class="btn btn-primary" (click)="setView(CalendarView.Week)"
+                                        [class.active]="view === CalendarView.Week">
+                                        Semana
+                                    </div>
+                                    <div class="btn btn-primary" (click)="setView(CalendarView.Day)"
+                                        [class.active]="view === CalendarView.Day">
+                                        Día
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div [ngSwitch]="view">
+                            <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate"
+                                [events]="events" [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen"
+                                (dayClicked)="dayClicked($event.day)"
+                                (eventTimesChanged)="eventTimesChanged($event)" >
+                            </mwl-calendar-month-view>
+                            <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate"
+                                [events]="events" [refresh]="refresh"
+                                (eventTimesChanged)="eventTimesChanged($event)" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+                            </mwl-calendar-week-view>
+                            <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate"
+                                [events]="events" [refresh]="refresh"
+                                (eventTimesChanged)="eventTimesChanged($event)" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+                            </mwl-calendar-day-view>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body justify-content-center">
+                <h2>Orden de exámenes</h2>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input  matInput type="text" required/>
+                </mat-form-field>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

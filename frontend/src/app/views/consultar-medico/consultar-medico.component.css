@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    width: 100%;
+}
+
+.card {
+    min-width: 850px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.cardMedico{
+    min-width: 250px;
+    max-width: 100px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+}
+  
+mat-card-title {
+    text-align: center;
+}
+  
+  .colorButton {
+    background-color: #3d3838;
+    color: white;
+  }
+  
+  .coloField {
+    color: #3d3838;
+  }
+  
+  .bgComponent {
+    background-image: url("../../../assets/img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    margin-right: 8px;
+  }
+
+  h1{
+    text-align: center;
+
+}
+
+.imgPerfil{
+    width: 110px;
+    height: 120px;
+    padding: 4px;
+
+}
+
+.busca{
+    width: 400px;
+}
+
+.name{
+    padding-left: 0;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+p{
+    text-align: center;
+}
+
+.imgM{
+    padding-right: 0;
+}
+
+.imgM2{
+    padding-right: 0;
+    padding-bottom: 10px;
+}
+
+.name{
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.eliminar{
+    background-color: #fc4242;
+    color: white;
+    margin-left: 20px;
+    width: 40px;
+}
+
+.editar{
+    background-color: #5f88f8;
+    width: 40px;
+    color: white;
+    margin-left: 20px;
+}

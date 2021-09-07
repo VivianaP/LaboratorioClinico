@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+}
+
+.card {
+    min-width: 750px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+.colorButton {
+    background-color: #3d3838;
+    color: white;
+}
+
+.coloField {
+    color: #3d3838;
+}
+
+.bgComponent {
+    background-image: url("../../../assets/img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.mat-form-field {
+    margin-right: 8px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+.acciones {
+    width: 50px;
+}
+
+.eliminar{
+    background-color: #9a4df1;
+    color: white;
+}
+
+.editar{
+    background-color: #5f88f8;
+    width: 30px;
+    color: white;
+}
+
+.name {
+    padding-top: 20px;
+}
+
+.agregar{
+    width: 100px;
+}
+

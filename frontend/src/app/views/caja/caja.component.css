@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.container-fluid{
+  padding-left: 5px;
+}
+.button {
+    width: 100%;
+}
+  
+.card {
+    min-width: 650px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+}
+  
+mat-card-title {
+    text-align: center;
+}
+  
+
+  
+  .coloField {
+    color: #3d3838;
+  }
+  
+  .bgComponent {
+    background-image: url("../../../assets/img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    margin-right: 8px;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  .cardCaja{
+      min-width: 180px;
+      width: 150px;
+      margin-bottom: 20px;
+      padding-top: 10px;
+      height: 200px;
+  }
+
+  .btnGuardar{
+    width: 150px;
+  }
+
+  .selectCaja{
+    width: 150px;
+    margin-left: 13px;
+  }
+
+  .checkEsp{
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+
+  .checkEspecial{
+    padding-left: 40px;
+  }
+
+  .modalCaja{
+    width: 250px;
+    margin-left: 50px;
+  }
+
+  .editar{
+    width: 30px;
+    margin-right: 10px;
+    background-color: #5f88f8;
+  }
+
+  .eliminar{
+    width: 30px;
+    background-color: #fc4242;
+    color: white;
+  }

@@ -1,0 +1,63 @@
+
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+                <h1>Registro Médico</h1>
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Buscar"           aria-label="Username" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">   <i class="fas fa-search"></i></span> 
+                            </div>
+                            <br>
+                        <div class="row justify-content-center d-flex">
+                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                        </div>
+                        <br>
+                        <div class="row">
+                            
+                            <div class="col-md-6 col-sm-6 colRegistro">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Cédula</mat-label>
+                                    <input [(ngModel)]="persona.cedula" matInput type="text" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sexo</mat-label>
+                                    <mat-select>
+                                        <mat-option value="f">Femenino</mat-option>
+                                        <mat-option value="m">Masculino</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Email</mat-label>
+                                    <input [(ngModel)]="persona.email" matInput type="email" required/>
+                                </mat-form-field>
+                            
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Nombres</mat-label>
+                                    <input [(ngModel)]="persona.nombre" matInput type="text" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Dirección</mat-label>
+                                    <input [(ngModel)]="persona.edad" matInput type="text" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Teléfono</mat-label>
+                                    <input [(ngModel)]="persona.telefono" matInput type="text" required/>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+            <div class="row justify-content-center d-flex">
+                <button mat-raised-button (click)="registrar()" color="accent" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" class="btnGuardar">Guardar</button>
+            </div>
+        </mat-card>
+
+    </div>
+</div>
+

@@ -1,0 +1,177 @@
+
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+                <h1>Registro de Usuario</h1>
+
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">  <i class="fas fa-search" ></i></span> 
+                            </div>
+                            <label>Datos personales</label>
+                            <br>
+                            <br>
+                            <div class="col-md-6 col-sm-6 colRegistro">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Cédula</mat-label>
+                                    <input [(ngModel)]="persona.cedula" matInput type="text" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Edad</mat-label>
+                                    <input [(ngModel)]="persona.edad" matInput type="number" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Email</mat-label>
+                                    <input [(ngModel)]="persona.email" matInput type="email" required/>
+                                </mat-form-field>
+                            
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Nombres</mat-label>
+                                    <input [(ngModel)]="persona.nombre" matInput type="text" required/>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sexo</mat-label>
+                                    <mat-select required>
+                                        <mat-option value="f">Femenino</mat-option>
+                                        <mat-option value="m">Masculino</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Teléfono</mat-label>
+                                    <input [(ngModel)]="persona.telefono" matInput type="text" required/>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <label>Datos de salud</label>
+                                <br>
+                                <br>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Plan de salud</mat-label>
+                                    <mat-select [(ngModel)]="modo"  required>  
+                                        <mat-option  value="true" >EPS</mat-option>
+                                        <mat-option value="false" >Medicina prepagada</mat-option>
+                                        <mat-option value="par" >Particular</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field appearance="fill" *ngIf="modo=='true'" >
+                                    <mat-label>Entidades</mat-label>
+                                    <mat-select required>
+                                        <mat-option value="a" >Comfaoriente</mat-option>
+                                        <mat-option value="b" >Coosalud</mat-option>
+                                        <mat-option value="c" >Medimas</mat-option>
+                                        <mat-option value="d" >Nueva EPS</mat-option>
+                                        <mat-option value="e" >Salud Total</mat-option>
+                                        <mat-option value="g" >Sanitas</mat-option>
+                                        <mat-option value="h" >Sura</mat-option>
+                                        <mat-option value="h" ><button  class="btnEntidad" mat-raised-button routerLink="/entidad" >Agregar entidad <i class="fas fa-plus mas"></i></button></mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <mat-form-field appearance="fill" *ngIf="modo=='false'" >
+                                            <mat-label>Entidades</mat-label>
+                                            <mat-select required>
+                                                <mat-option value="a" >Comfaoriente</mat-option>
+                                                <mat-option value="b" >Coosalud</mat-option>
+                                                <mat-option value="c" >Medimas</mat-option>
+                                                <mat-option value="d" >Nueva EPS</mat-option>
+                                                <mat-option value="e" >Salud Total</mat-option>
+                                                <mat-option value="g" >Sanitas</mat-option>
+                                                <mat-option value="h" >Sura</mat-option>
+                                                <mat-option value="h" ><button  class="btnEntidad" mat-raised-button routerLink="/entidad" >Agregar entidad <i class="fas fa-plus mas"></i></button></mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <mat-form-field appearance="fill" *ngIf="modo=='false'" >
+                                            <mat-label>Plan de cobertura</mat-label>
+                                            <mat-select>
+                                                <mat-option>Básico</mat-option>
+                                                <mat-option>Plus</mat-option>
+                                                <mat-option>Preferencial</mat-option>
+                                                <mat-option value="h" ><button  class="btnEntidad" mat-raised-button routerLink="/entidad" >Agregar plan <i class="fas fa-plus mas"></i></button></mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <label>Prioridad</label>
+                                <br>
+                                <br>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Prioridad</mat-label>
+                                    <mat-select   [(ngModel)]="prioridad">
+                                        <mat-option value="">Ninguna</mat-option>
+                                        <mat-option  value="true" >Tercera edad</mat-option>
+                                        <mat-option value="true" >Discapacidad</mat-option>
+                                        <mat-option value="true" >Embarazo</mat-option>
+                                        <mat-option value="h" ><button  class="btnEntidad" mat-raised-button routerLink="/prioridad" >Agregar prioridad <i class="fas fa-plus mas"></i></button></mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+
+            <div class="row justify-content-center d-flex">
+                <button mat-raised-button (click)="registrar()" color="accent" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" class="btnGuardar">Guardar</button>
+            </div>
+        </mat-card>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog justify-content-center d-flex  ">
+        <div class="modal-content modalTurno justify-content-center d-flex">
+            <div class="modal-body " *ngIf="(modo == 'true' && prioridad == '')">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card cardTurno justify-content-center d-flex">
+                    <h1 class="turnoTitle">TURNO A5</h1>
+                </div>
+            </div>
+            <div class="modal-body " *ngIf="(modo == 'par' && prioridad == '')">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card cardTurno justify-content-center d-flex">
+                    <h1 class="turnoTitle">TURNO A5</h1>
+                </div>
+            </div>
+            <div class="modal-body  " *ngIf="(modo == 'false')">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card cardTurno2 justify-content-center d-flex">
+                    <h1 class="turnoTitle">TURNO B2</h1>
+                </div>
+            </div>
+            <div class="modal-body  " *ngIf="(modo == 'true' && prioridad == 'true')">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card cardTurno2 justify-content-center d-flex">
+                    <h1 class="turnoTitle">TURNO B2</h1>
+                </div>
+            </div>
+            <div class="modal-body  " *ngIf="(modo == 'par' && prioridad == 'true')">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card cardTurno2 justify-content-center d-flex">
+                    <h1 class="turnoTitle">TURNO B2</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

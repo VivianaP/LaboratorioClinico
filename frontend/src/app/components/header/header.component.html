@@ -1,0 +1,47 @@
+<mat-toolbar class="bgHeader">
+  <ul class="home">
+    <li> <a mat-button routerLink=""><img src="../../assets/img/logo.png" class="img-thumbnail imgLogo" alt="..."></a></li>
+  </ul>
+
+
+  <ul class="general">
+    
+    <li class="dropdown">
+      <a mat-button>Usuarios</a>
+      <div class="dropdown-content">
+        <a mat-button routerLink="usuario">Asignar turno</a>
+        <a mat-button routerLink="prioridad">Prioridad</a>
+      </div>
+    </li>
+    <li><a mat-button routerLink="factura">Factura</a></li>
+    <li class="dropdown">
+      <a mat-button>Agendas</a>
+      <div class="dropdown-content">
+        <a mat-button routerLink="agenda">Angenda general</a>
+        <a mat-button routerLink="agenda-medico">Agenda Médico</a>
+      </div>
+    </li>
+    <li><a mat-button routerLink="caja">Cajas</a></li>
+    <li><a mat-button routerLink="turno">Turnos</a></li>
+    <li><a mat-button routerLink="ver-orden">Ordenes exámen</a></li>
+    <li><a mat-button routerLink="tipo-examen">Exámen</a></li>
+    <li class="dropdown">
+      <a mat-button>Médicos</a>
+      <div class="dropdown-content">
+        <a mat-button routerLink="consultar-medico">Consultar Médicos</a>
+        <a mat-button routerLink="registrar-medico">Registrar Médico</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a mat-button>Plan salud</a>
+      <div class="dropdown-content">
+        <a mat-button routerLink="plan-salud">Plan salud</a>
+        <a mat-button routerLink="entidad">Entidades</a>
+      </div>
+
+
+
+    </li>
+  </ul>
+</mat-toolbar>

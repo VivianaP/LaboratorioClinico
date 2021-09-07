@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+}
+
+.button-agregar {
+    width: 200px;
+}
+
+.card {
+    min-width: 650px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.inputUsuario{
+    color: black;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+.colorButton {
+    background-color: #3d3838;
+    color: white;
+}
+
+.coloField {
+    color: #3d3838;
+}
+
+.bgComponent {
+    background-image: url("../../../assets/img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.mat-form-field {
+        margin-right: 8px;
+        width: 280px;
+}
+
+h1{
+    text-align: center;
+}
+
+.imgPerfil{
+    width: 110px;
+    height: 120px;
+    padding: 4px;
+
+}
+
+.btnGuardar{
+    width: 200px;
+}

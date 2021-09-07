@@ -1,0 +1,200 @@
+
+
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+            <h1>Agenda</h1>
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2 rowMedico">
+                                <div class="card cardMedico">
+                                    <div class="row ">
+                                        <div class="col-md-5 col-sm-5 imgM">
+                                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 name">
+                                            <p class="size">Armando López </p>
+                                            <p>COD: 110</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-5 imgM">
+                                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 name">
+                                            <p class="size">Armando López </p>
+                                            <p>COD: 111</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-5 imgM">
+                                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 name">
+                                            <p class="size">Armando López </p>
+                                            <p>COD: 112</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-5 imgM">
+                                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 name">
+                                            <p class="size">Armando López </p>
+                                            <p>COD: 113</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-5 imgM">
+                                            <img src="../../../assets/img/fotoperfil.jpg" class="img-thumbnail imgPerfil" alt="...">
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 name">
+                                            <p class="size">Armando López </p>
+                                            <p>COD: 114</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-sm-10" >
+                                <div class="row text-center">
+                                    <div class="col-md-4">
+                                        <div class="btn-group">
+                                            <div class="btn btn-primary" mwlCalendarPreviousView [view]="view"
+                                                [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                                                Anterior
+                                            </div>
+                                            <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
+                                                Hoy
+                                            </div>
+                                            <div class="btn btn-primary" mwlCalendarNextView [view]="view"
+                                                [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                                                Próximo
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h3>Septiembre</h3>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="btn-group">
+                                            <div class="btn btn-primary" (click)="setView(CalendarView.Month)"
+                                                [class.active]="view === CalendarView.Month">
+                                                Mes
+                                            </div>
+                                            <div class="btn btn-primary" (click)="setView(CalendarView.Week)"
+                                                [class.active]="view === CalendarView.Week">
+                                                Semana
+                                            </div>
+                                            <div class="btn btn-primary" (click)="setView(CalendarView.Day)"
+                                                [class.active]="view === CalendarView.Day">
+                                                Día
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div [ngSwitch]="view">
+                                    <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate"
+                                        [events]="events" [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen"
+                                        (dayClicked)="dayClicked($event.day)"
+                                        (eventTimesChanged)="eventTimesChanged($event)" >
+                                    </mwl-calendar-month-view>
+                                    <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate"
+                                        [events]="events" [refresh]="refresh"
+                                        (eventTimesChanged)="eventTimesChanged($event)" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+                                    </mwl-calendar-week-view>
+                                    <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate"
+                                        [events]="events" [refresh]="refresh"
+                                        (eventTimesChanged)="eventTimesChanged($event)" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+                                    </mwl-calendar-day-view>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modalOrden">
+            <div class="modal-body justify-content-center">
+                <h2>Orden de exámenes</h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 colRegistro">
+                        <mat-form-field appearance="fill" class="cedula">
+                            <mat-label>Cédula</mat-label>
+                            <input value="1.090.519.944" class="inputUsuario" matInput type="text" disabled/>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 col-sm-6 colName">
+                        <mat-form-field appearance="fill"  class="nombre">
+                            <mat-label>Nombre</mat-label>
+                            <input  class="inputUsuario" matInput type="text" value="Viviana Patiño" disabled/>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row justify-content-center d-flex">
+                    <table class="table tablaOrden ">
+                        <thead>
+                            <tr>
+                                <th class="tdTitle" scope="col">EXÁMEN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">PERFIL LÍPIDO</td>
+                            </tr>
+                            <tr>
+                                <td>Colesterol</td>
+                            </tr>
+                            <tr>
+                                <td>HDL</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>LDL </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>HDL</td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="4">PERFIL RENAL</td>
+                            </tr>
+                            <tr>
+                                <td>Glubolina Calcio</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Creatinina</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row justify-content-center d-flex">
+                        <a color="accent" class="buttonAddResult" data-bs-dismiss="modal" mat-raised-button routerLink="/registrar-resultado" >Agregar resultados</a>  
+                    
+                        <a color="accent" class="buttonResult" data-bs-dismiss="modal" mat-raised-button routerLink="/resultado" >Ver resultados</a>  
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

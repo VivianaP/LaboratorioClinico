@@ -1,0 +1,116 @@
+
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+            <h1>Factura</h1>
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                        <h3>Datos usuario</h3>
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 colRegistro">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Cédula</mat-label>
+                                        <input value="1.090.519.944" class="inputUsuario" matInput type="text" disabled/>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Nombre</mat-label>
+                                        <input  class="inputUsuario" matInput type="text" value="Viviana Patiño" disabled/>
+                                    </mat-form-field>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 colRegistro">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Plan de salud</mat-label>
+                                        <input value="EPS" class="inputUsuario" matInput type="text" disabled/>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Entidad</mat-label>
+                                        <input  class="inputUsuario" matInput type="text" value="Sanitas" disabled/>
+                                    </mat-form-field>
+                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                        <a color="accent" class="button-agregar" mat-raised-button routerLink="/orden-examen" >Agregar orden de exámen</a>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center d-flex">
+                            <table class="table tablaFactura ">
+                                <thead>
+                                    <tr>
+                                        <th class="tdTitle" scope="col">EXÁMEN</th>
+                                        <th class="tdTitle" scope="col">VALOR</th>
+                                        <th class="tdTitle" scope="col">% A PAGAR</th>
+                                        <th class="tdTitle" scope="col">SUBTOTAL TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">PERFIL LÍPIDO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colesterol</td>
+                                        <td class="tdTitle">$ 30.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDL</td>
+                                        <td class="tdTitle">$ 30.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LDL </td>
+                                        <td class="tdTitle">$ 30.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDL</td>
+                                        <td class="tdTitle">$ 30.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">PERFIL RENAL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Glubolina Calcio</td>
+                                        <td class="tdTitle">$ 50.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 25.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Creatinina</td>
+                                        <td class="tdTitle">$ 50.000</td>
+                                        <td class="tdTitle">50%</td>
+                                        <td class="tdTotal">$ 25.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="tdTotal"><b>TOTAL</b></td>
+                                        <td colspan="1" class="tdTotal"><b>$ 110.000</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="row justify-content-end d-flex">
+                            <a color="accent" class="buttonAgenda" mat-raised-button routerLink="/agenda" *ngIf="!modo">Ver agenda</a>
+                        
+                        <a color="accent" class="buttonTurno" mat-raised-button  (click)="modo = !modo">Guardar</a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>

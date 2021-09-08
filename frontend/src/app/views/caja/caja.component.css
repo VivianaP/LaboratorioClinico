@@ -57,10 +57,12 @@ mat-card-title {
       margin-bottom: 20px;
       padding-top: 10px;
       height: 200px;
+      border-color:  #5DC3D1;;
   }
 
   .btnGuardar{
     width: 150px;
+    background-color: #5DC3D1;
   }
 
   .selectCaja{
@@ -85,7 +87,7 @@ mat-card-title {
   .editar{
     width: 30px;
     margin-right: 10px;
-    background-color: #5f88f8;
+    background-color: #9a4df1;
   }
 
   .eliminar{
@@ -93,3 +95,4 @@ mat-card-title {
     background-color: #fc4242;
     color: white;
   }
+

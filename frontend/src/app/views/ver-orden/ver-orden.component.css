@@ -8,7 +8,7 @@
 }
 
 .card {
-    min-width: 750px;
+    min-width: 850px;
     max-width: 500px;
     width: 100%;
 }
@@ -75,3 +75,27 @@ h1{
     width: 100px;
 }
 
+.editar1{
+    background-color: #5DC3D1;
+}
+
+.colRegistro{
+    padding-right: 0;
+}
+
+.colName{
+    padding-left: 0;
+}
+
+.modalOrden{
+    width: 550px;
+    margin-left: 20px;
+}
+
+.tablaOrden{
+    width: 400px;
+}
+.buscar{
+    width: 400px;
+    align-self: center;
+}

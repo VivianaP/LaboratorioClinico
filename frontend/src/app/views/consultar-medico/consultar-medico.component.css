@@ -52,11 +52,12 @@ mat-card-title {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 83%;
   }
-  
-  .mat-form-field {
+
+.mat-form-field {
     margin-right: 8px;
-  }
+}
 
   h1{
     text-align: center;

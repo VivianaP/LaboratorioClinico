@@ -23,8 +23,8 @@
     </li>
     <li><a mat-button routerLink="caja">Cajas</a></li>
     <li><a mat-button routerLink="turno">Turnos</a></li>
-    <li><a mat-button routerLink="ver-orden">Ordenes exámen</a></li>
-    <li><a mat-button routerLink="tipo-examen">Exámen</a></li>
+    <li><a mat-button routerLink="ver-orden">Ordenes examenes</a></li>
+    <li><a mat-button routerLink="tipo-examen">Examenes</a></li>
     <li class="dropdown">
       <a mat-button>Médicos</a>
       <div class="dropdown-content">
@@ -34,14 +34,117 @@
     </li>
 
     <li class="dropdown">
-      <a mat-button>Plan salud</a>
+      <a mat-button>Planes salud</a>
       <div class="dropdown-content">
-        <a mat-button routerLink="plan-salud">Plan salud</a>
+        <a mat-button routerLink="plan-salud">Planes salud</a>
         <a mat-button routerLink="entidad">Entidades</a>
       </div>
-
-
-
     </li>
   </ul>
+
+  <ul class="home">
+    <li> <a mat-button data-bs-toggle="modal" data-bs-target="#header" data-bs-dismiss="modal"><i class="fas fa-tv fa-2x"></i></a></li>
+  </ul>
+
+  <ul class="home">
+    <li> <a mat-button ><i class="fas fa-user fa-2x"></i></a></li>
+  </ul>
 </mat-toolbar>
+
+
+<div class="modal fade " id="header" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modalCajas">
+      <div class="modal-content modalTurnos">
+          <div class="modal-body justify-content-center rowTurno" >
+              <div class="row justify-content-center d-flex ">
+                <div class="col-md-5 col-sm-5">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <h2><b>TURNO</b></h2>
+                      <div class="card cardTurnoTV">
+                        <h1>A1</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <h2><b>CAJA</b></h2>
+                      <div class="card cardCajaTV">
+                        <h1>CAJA 3</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardTurnoTV">
+                        <h1>A2</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardCajaTV">
+                        <h1>CAJA 5</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardTurnoTV">
+                        <h1>B1</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardCajaTV">
+                        <h1>CAJA 1</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardTurnoTV">
+                        <h1>A3</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardCajaTV">
+                        <h1>CAJA 6</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardTurnoTV">
+                        <h1>A4</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardCajaTV">
+                        <h1>CAJA 2</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 col-sm-7">
+                  <img src="../../../assets/img/xlab.png" class="img-thumbnail imgPerfil" alt="...">
+                  <br>
+                  <br>
+                  <div class="row rowPrin">
+
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardTurnoTVGrande">
+                        <h3>A3</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="card cardCajaTVGrande">
+                        <h3>CAJA 6</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

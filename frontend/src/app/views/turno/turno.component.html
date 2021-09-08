@@ -12,25 +12,65 @@
                                 <th scope="col">NOMBRE</th>
                                 <th scope="col">TURNO</th>
                                 <th scope="col">CAJA</th>
+                                <th scope="col">FACTURAR</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1.090.519.942</td>
+                                <td>1090519942</td>
                                 <td>Viviana Patiño</td>
                                 <td>A1</td>
-                                <td></td>
+                                <td>CAJA 2</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
                             </tr>
                             <tr>
-                                <td>1.090.519.942</td>
-                                <td>Alberto Perez</td>
+                                <td>49665697</td>
+                                <td>Isabel Arenas</td>
                                 <td>A2</td>
-                                <td></td>
+                                <td>CAJA 4</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
+                            </tr>
+                            <tr>
+                                <td>1092527456</td>
+                                <td>Roberto Torres</td>
+                                <td>A3</td>
+                                <td>CAJA 3</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
+                            </tr>
+                            <tr>
+                                <td>1090385734</td>
+                                <td>Ana Maria Suarez</td>
+                                <td>A4</td>
+                                <td>CAJA 6</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
+                            </tr>
+                            <tr>
+                                <td>1090834596</td>
+                                <td>Enrique Sanchez</td>
+                                <td>A5</td>
+                                <td>CAJA 5</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
+                            </tr>
+                            <tr>
+                                <td>38687596</td>
+                                <td>Antonio Guzman</td>
+                                <td>A6</td>
+                                <td>CAJA 3</td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura" ><p class="pFact">Facturar</p></a> </td>
+                            </tr>
+                            <tr>
+                                <td>70395859</td>
+                                <td>Luis Miguel Avila</td>
+                                <td>A7</td>
+                                <td  ><p *ngIf="modo!=='false'" >CAJA 2</p></td>
+                                <td><a color="accent" class="btnFacturar" data-bs-dismiss="modal" mat-raised-button routerLink="/factura"  ><p class="pFact">Facturar</p></a> </td>
                             </tr>
                             
                         </tbody>
                     </table>
-
+                    <div class="row  justify-content-center d-flex">
+                        <a color="accent" class="buttonAddResult" data-bs-dismiss="modal" mat-raised-button     (click)="modo = !modo">Siguiente</a> 
+                    </div>
                 </div>
             </div>
         </mat-card>

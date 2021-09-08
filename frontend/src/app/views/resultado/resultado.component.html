@@ -1,17 +1,23 @@
-
 <div class="bgComponent">
     <div class="form">
         <mat-card class="card">
-            <h1>Resultados</h1>
             <div class="container-fluid">
-                <div class="container">
+                <div class="container" id="MyDIv">
+                    <div class="row rowImg  "  >
+                        <div class="col-md-5">
+                            <img src="../../../assets/img/xlab.png" class="img-thumbnail imgPerfil" alt="...">
+                        </div>
+                        <div class="col-md-3 ">
+                            <h4 class="titleResult"><b>RESULTADOS</b></h4>
+                        </div>
+                        <div class="col-md-4 ">
+                            <h4><b>xLAB Laboratorio</b></h4>
+                            <h4>Av 3. Calle 4 - 40 Barrio Blanco</h4>
+                            <h4>Teléfono: 322 456 34 26</h4>
+                            <h4>E-mail: xlab@xlab.com</h4>
+                        </div>
+                    </div>
                     <table class="table">
-                        <colgroup span="2" width="100"></colgroup>
-                        <thead>
-                            <tr>
-                                <th class="result" scope="col" colspan="5">Laboratorio xLAB</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
                                 <td class="paciente"><b>PACIENTE: VIVIANA PATIÑO</b></td>
@@ -70,11 +76,13 @@
                                 <td>0.66 - 0.69</td>
                             </tr>
                         </tbody>
+                    
                     </table>
-                    <div class="row justify-content-end d-flex">
-                    <button mat-raised-button class="pdf" color="accent">PDF</button>
-                    </div>
+                    
                 </div>
+                <div class="row justify-content-end d-flex">
+                    <button mat-raised-button class="pdf"  color="accent" href="resultado.pdf" (click)="downloadAsPDF()">PDF</button>
+                    </div>
             </div>
         </mat-card>
     </div>

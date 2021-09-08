@@ -49,6 +49,7 @@ mat-card-title {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 83%;
 
 }
 
@@ -69,5 +70,6 @@ h1{
 }
 
 .btnGuardar{
-    width: 200px;
+    width: 120px;
+    background-color: #5DC3D1;
 }

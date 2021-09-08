@@ -9,7 +9,9 @@
 }
 
 .btnGuardar {
-    width: 200px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: #5DC3D1;
 }
 
 .card {
@@ -118,4 +120,15 @@ h3{
 
 .mas {
     padding-bottom: 3px;
+}
+
+.buscar{
+    width: 400px;
+    margin-left: 90px;
+}
+
+.eliminar{
+    background-color: #fc4242;
+    color: white;
+    width: 20px;
 }

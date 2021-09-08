@@ -99,12 +99,17 @@
                                     </tr>
                                 </tbody>
                             </table>
+
                         </div>
+                        <div class="form-check form-switch checkEspecial">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">¿Desea rebicir los resultados por correo?</label>
+                            <input class="form-check-input checkEsp" type="checkbox" id="flexSwitchCheckChecked" >
+                        </div>  
                         <br>
                         <div class="row justify-content-end d-flex">
                             <a color="accent" class="buttonAgenda" mat-raised-button routerLink="/agenda" *ngIf="!modo">Ver agenda</a>
                         
-                        <a color="accent" class="buttonTurno" mat-raised-button  (click)="modo = !modo">Guardar</a>
+                        <button color="accent" class="buttonTurno" mat-raised-button  (click)="modo = !modo">Guardar</button>
                         
                         </div>
                     </div>

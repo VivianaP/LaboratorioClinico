@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoExamenComponent implements OnInit {
 
+  public modo: any = "false";
+
   constructor() { }
 
   ngOnInit(): void {

@@ -61,7 +61,7 @@ h1{
 }
 
 .editar{
-    background-color: #5f88f8;
+    background-color: #9a4df1;
     width: 30px;
 }
 
@@ -71,6 +71,7 @@ h1{
 
 .agregar{
     width: 100px;
+    background-color: #5DC3D1;
 }
 
 .nombre{

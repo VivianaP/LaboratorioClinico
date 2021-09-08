@@ -41,6 +41,7 @@ import { LoginComponent } from './components/login/login.component';
 
 
 
+
 registerLocaleData(localePy, 'es');
 registerLocaleData(localePt, 'pt');
 registerLocaleData(localeEn, 'en');

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { AgendaMedicoComponent } from './views/agenda-medico/agenda-medico.component';
 import { AgendaComponent } from './views/agenda/agenda.component';
 import { CajaComponent } from './views/caja/caja.component';
@@ -8,6 +7,7 @@ import { ConsultarMedicoComponent } from './views/consultar-medico/consultar-med
 import { EntidadComponent } from './views/entidad/entidad.component';
 import { FacturaComponent } from './views/factura/factura.component';
 import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './login/login.component';
 import { OrdenExamenComponent } from './views/orden-examen/orden-examen.component';
 import { PlanSaludComponent } from './views/plan-salud/plan-salud.component';
 import { PrioridadComponent } from './views/prioridad/prioridad.component';

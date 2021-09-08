@@ -26,7 +26,7 @@
                                         <td class="acciones"><button mat-raised-button  color="accent" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" class="editar"><i class="far fa-edit"></i></button></td>
                                         <td class="acciones"><button  class="eliminar" mat-raised-button routerLink="" ><i class="far fa-trash-alt "></i></button></td>
                                     </tr>
-                                    <tr>
+                                    <tr (click)="modo = !modo">
                                         <td >Medicina prepagada</td>
                                         <td ><i class="fas fa-eye"></i></td>
                                         <td class="acciones"><button mat-raised-button  color="accent" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" class="editar"><i class="far fa-edit"></i></button></td>
@@ -40,14 +40,15 @@
                                         <td class="acciones"><button  class="eliminar" mat-raised-button routerLink="" ><i class="far fa-trash-alt "></i></button></td>
                                     </tr>
                                 </tbody>
+                            
                             </table>
 
                                 <br>
-                                <table class="table">
+                                <table class="table" *ngIf="!modo">
                                     <thead>
                                         <tr>
                                             <th scope="col" colspan="3" class="plan">PLAN DE COBERTURA</th>
-                                            <th><button  color="accent" mat-raised-button data-bs-toggle="modal" data-bs-target="#plan" data-bs-dismiss="modal" >Agregar</button></th>
+                                            <th><button  color="accent" mat-raised-button data-bs-toggle="modal" data-bs-target="#plan" data-bs-dismiss="modal" class="agregarCober" >Agregar</button></th>
                                         </tr>
                                         <tr>
                                             <th scope="col">NOMBRE</th>
@@ -99,6 +100,10 @@
                     <mat-label>% de Tarifa</mat-label>
                     <input  matInput type="text" required/>
                 </mat-form-field>
+                <div class="form-check form-switch checkEspecial">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">¿Tiene plan de cobertura?</label>
+                    <input class="form-check-input checkEsp" type="checkbox" id="flexSwitchCheckChecked" checked>
+                </div> 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

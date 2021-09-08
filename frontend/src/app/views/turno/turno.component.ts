@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./turno.component.css']
 })
 export class TurnoComponent implements OnInit {
-  public mostrar: any = "";
+  
+  public modo: any = "false";
 
   constructor() { }
 

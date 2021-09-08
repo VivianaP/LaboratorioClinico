@@ -113,16 +113,18 @@ p{
 }
 
 .nombre{
-    width: 250px;
+    width: 230px;
 }
 
 .buttonAddResult{
-    width: 180px;
+    width: 150px;
+    background-color: #5DC3D1;
 }
 
 .buttonResult{
     margin-left: 10px;
     width: 150px;
+    background-color: #9a4df1;
 }
 
 .colRegistro{
@@ -131,4 +133,26 @@ p{
 
 .colName{
     padding-left: 0;
+}
+
+.htext{
+    text-align: center;
+}
+
+.editar{
+    align-self: center;
+    width: 50px;
+}
+
+.inputTime{
+    width: 100px;
+    align-self: center;
+}
+
+.cardTime{
+    min-width: 160px;
+    max-width: 100px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

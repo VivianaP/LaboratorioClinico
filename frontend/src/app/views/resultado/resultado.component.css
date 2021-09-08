@@ -67,3 +67,21 @@ h1{
     width: 50px;
 }
 
+.imgPerfil{
+    border: none;
+    width: 800px;
+}
+
+.rowImg{
+    width: 800px;
+}
+
+h4{
+    margin-bottom: 5px;
+    text-align: end;
+}
+
+.titleResult{
+    text-align: center;
+    margin-top: 80px;
+}

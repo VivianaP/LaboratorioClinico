@@ -59,3 +59,39 @@ pre {
     background-color: #f5f5f5;
     padding: 15px;
 }
+
+.tablaOrden{
+    width: 400px;
+}
+
+.cedula{
+    padding-left: 20px;
+    margin: 0;
+}
+
+.nombre{
+    width: 230px;
+}
+
+.buttonAddResult{
+    width: 150px;
+    background-color: #5DC3D1;
+}
+
+.buttonResult{
+    margin-left: 10px;
+    width: 150px;
+    background-color: #9a4df1;
+}
+
+.colRegistro{
+    padding-right: 0;
+}
+
+.colName{
+    padding-left: 0;
+}
+
+.inputUsuario{
+    color: black;
+}

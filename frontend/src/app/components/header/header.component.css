@@ -1,12 +1,12 @@
 .headerSpacer {
     flex: 1 1 auto;
-  }
-  
+}
+
 a {
     text-decoration: none;
     color: white;
 }
-  
+
 li {
   float: left;
   display: inline-block;
@@ -16,11 +16,11 @@ li {
 ul {
     margin: auto;
 }
-  
+
 .bgHeader {
     background-color: #383d38;
 }
-  
+
 mat-form-field {
     margin: 5px 0px;
     font-size: 15px;
@@ -86,3 +86,70 @@ li.dropdown {
     margin-left: 150px;
 }
 
+.cardTurno{
+    min-width: 200px;
+    height: 200px;
+}
+
+.modalTurnos{
+    width: 700px;
+
+}
+
+.modalCajas{
+    margin-right: 500px;
+}
+
+.rowTurno{
+    padding: 30px;
+}
+
+h1{
+    align-self: center;
+    margin-top: 6px;
+}
+
+h2{
+    text-align: center;
+    
+}
+
+h3{
+    align-self: center;
+    margin-top: 40px;
+    font-size: 40px;
+
+}
+
+
+.cardTurnoTV{
+    background-color: #377a83;
+    color: white;
+    height: 50px;
+}
+
+.cardCajaTV{
+    background-color: #8352b9;
+    color: white;
+    height: 50px;
+}
+
+.imgPerfil{
+    border: none;
+}
+
+.rowPrin{
+    border-color: gray;
+}
+
+.cardTurnoTVGrande{
+    background-color: #377a83;
+    color: white;
+    height: 120px;
+}
+
+.cardCajaTVGrande{
+    background-color: #8352b9;
+    color: white;
+    height: 120px;
+}

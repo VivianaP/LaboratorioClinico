@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanSaludComponent implements OnInit {
 
+  public modo: any = "false";
+
+
   constructor() { }
 
   ngOnInit(): void {
